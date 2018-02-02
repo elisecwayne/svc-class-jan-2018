@@ -1,16 +1,42 @@
+/*@font-face {
+    font-family: MyWebFont;
+    src: url('webfont.eot');
+
+}*/
+/*font-family: 'Montserrat', sans-serif;*/
+/*font-family: 'Lobster', cursive;*/
 body {
+    font-family: 'Monsterrat', sans-serif;
     max-width: 960px;
     margin: auto;
 }
 header {
-    background-image: url("../images/white_tiles_@2X.png");
-    background-size: cover;
+    background-color: #FFFFFA;
     text-align: center;
-    padding: 0;
+    padding: 1em;
+    margin: 0;
+}
+header h1 {
+    font-family: 'Lobster', cursive;
+    color: #FF5386;
+    /*padding-top: 68px;*/
+    position: relative;
+    /*top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);*/
+    float: left;
+}
+header img {
+    float: right;
+    width: 30%;
+}
+nav {
+    margin: 0;
+    float: bottom;
 }
 p {
     color: #f3eef8;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Montserrat', sans-serif;
     background-color: #000000;
     background-image: url("../images/slash_it_@2X.png");
     background-repeat: repeat;
@@ -22,22 +48,27 @@ p.secondary {
     background: linear-gradient(to right, red, yellow, green);
 }
 h1 {
+    font-family: 'Lobster', cursive;
     font-size: 5em;
     color: #d896ff;
 }
 h2 {
+    font-family: 'Lobster', cursive;
     font-size: 4em;
     color: #be29ec;
 }
 h3 {
+    font-family: 'Lobster', cursive;
     font-size: 3em;
     color: darkviolet;
 }
 h4 {
+    font-family: 'Lobster', cursive;
     font-size: 2em;
     color: #800080;
 }
 h5 {
+    font-family: 'Lobster', cursive;
     font-size: 1em;
     color: #660066;
 }
@@ -74,15 +105,39 @@ nav li a:hover {
     background-color: #111;
     color: white;
 }
-div {
+div.beach {
     width: 345px;
     height: 304px;
     background-image: url("../images/beach.png");
+    background-repeat: no-repeat;
     display: inline-block;
     font-family: sans-serif;
     font-weight: medium;
     text-transform: uppercase;
     font-size: 40px;
+    padding-top: 250px;
+    padding-left: 10px;
     color: black;
-    
+}
+/*img.thumbnail {
+    width: 200px;
+}*/
+div.gallery {
+    width: 80%;
+    border: 2px solid black;
+    margin: auto auto;
+    padding: 2em;
+}
+.gallery img.thumbnail {
+    width: 200px;
+    padding: 1em;
+}
+.gallery .buttons {
+    font-size: 2em;
+}
+.gallery #left {
+    color: white;
+}
+.clear {
+    clear: both;
 }
