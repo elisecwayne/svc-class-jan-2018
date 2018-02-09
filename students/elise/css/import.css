@@ -1,0 +1,9 @@
+@media (min-width: 768px) {
+    .button {
+        width: 5em;
+    }
+    /*.modal {
+        top: 200px;
+        width: 400px;
+    }*/
+}

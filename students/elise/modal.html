@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+	
+    <title>Modal</title>
+   
+    <style>
+      body {
+        margin: 40px;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      
+      .button {
+        background: rebeccapurple;
+        padding: 10px;
+        color: white;
+        cursor: pointer;
+        width: 100%;
+        display: inline-block;
+        text-align: center;
+      }
+     
+     .close {
+        color: red;
+        cursor: pointer;
+        float: right;
+        font-size: 1em;
+     }
+
+     .modal {
+       /*border: deeppink dashed;*/
+       margin-left: 0;
+       margin-right: 0;
+       max-height: 90%;
+       border-bottom: 10px solid transparent;
+       /*width: 80%;*/
+       /*height: 50px;*/
+       padding: 25px;
+       position: absolute;
+       top: 40px;
+       left: 40px;
+       right: 40px;
+       border-radius: 3px;
+       color: #fff;
+       background: #111;
+       z-index: 2147483648;
+     }
+
+     #background {
+        display: none;
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 2147483647;
+        text-align: center;
+        white-space: nowrap;
+        cursor: pointer;
+        background: #333;
+        /*background: rgba(0,0,0,0);*/
+    }
+
+
+
+      /* IF you wanted to import here and not through a linked stylesheet
+        @media (min-width: 768px) {
+        @import 'desktop.css';
+      }*/
+
+    
+    </style>
+    <link href="css/import.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Lobster|Montserrat" rel="stylesheet">
+    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet"> <!-- Font Awesome link, make sure it is up to date -->
+    
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+
+</head>
+<body>
+<p><a href="https://noelboss.github.io/featherlight/" target="_blank">Overlay code grabbed from here</a></p>
+   <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+  </p>
+  <a class="button" id="purpleClickMeButton">Click me!</a>
+  <p>
+    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
+  </p>
+
+  
+<div id="background" class="close">&nbsp;</div>
+
+
+<!-- inline style of display:none is totally acceptable here, helps not have the page flicker what is supposed to be hidden -->
+  <div id="modal" class="modalContainer" style="display:none">
+
+    <div class="modal">
+      <a class="close"><i class="far fa-times-circle"></i></a>
+      
+      Put anything you want in this modal
+    </div>
+    
+  </div>
+
+
+
+  <script> 
+    $("#purpleClickMeButton").on("click", function(){
+      $('#background').show().css('background','rgba(0,0,0,.8');
+      $('.modalContainer').show();
+    });
+    
+    $(".close, #background").on("click", function() {
+      $('#background').hide();
+      $('.modalContainer').hide();
+    });
+  </script>
+
+
+</body>
+
+</html>
+
+
+
